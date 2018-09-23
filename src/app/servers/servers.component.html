@@ -1,17 +1,21 @@
 
 <button 
   class="btn btn-primary"
-  [disabled]="!allowNewServer">
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">
   Add Server
 </button>
 
-<div>
+<p>{{ serverCreationStatus }}</p>
+
+
+<!-- <div>
     String interpolation:
     <p>{{ allowNewServer }}</p>
     
     Property binding:
     <p [innerText]="allowNewServer"></p>
-</div>
+</div> -->
 
 
 <app-server></app-server>
