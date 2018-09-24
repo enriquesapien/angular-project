@@ -1,10 +1,28 @@
 
 <label for="">Server Name</label>
 
+<!-- <input 
+  type="text" 
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+
+
+<!-- 
+  Two-way biding. 
+
+  Syntaxes are combined: Property binding [], and event binding ()
+
+  The ngModel directive is used.
+
+  Input above will not be updated in sync because is not
+  implemented with two-way binding.
+
+-->
+
 <input 
   type="text" 
   class="form-control"
-  (input)="onUpdateServerName($event)">
+  [(ngModel)]="serverName">
 
   <p>{{ serverName }}</p>
 
